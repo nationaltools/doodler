@@ -1,0 +1,426 @@
+body
+{
+	
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Oxygen', sans-serif;
+	color: #e7e7e7;
+
+	background-color: #ddd;
+}
+/*
+a:link, a:visited
+{
+	color:#666;
+	text-decoration:underline;
+}
+a:hover
+{
+
+	color:#000;
+	text-decoration: underline;
+}*/
+#main {
+	/*width: 960px;
+	margin-left: auto;
+	margin-right: auto;*/
+	min-width: 1180px;
+}
+#topBarWrapper {
+	background-image: -webkit-linear-gradient(top, rgba(95, 95, 95, 1) 0%, rgba(172, 172, 172, 1) 100%);
+	background-image: -moz-linear-gradient(top, rgba(95, 95, 95, 1) 0%, rgba(172, 172, 172, 1) 100%);
+	background-image: -o-linear-gradient(top, rgba(95, 95, 95, 1) 0%, rgba(172, 172, 172, 1) 100%);
+	height: 100px;
+}
+#topBar
+{
+	
+	height: 100px;
+	width:1180px;
+	margin-left:auto;
+	margin-right: auto;
+	position: relative;
+
+}
+
+#contentArea {
+	width: 1100px;
+	height: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(0,0,0,0);
+	position: relative;
+}
+
+
+
+#logoButtonIntro {
+	background-image: url("doodlerLogo.png");
+	width: 216px;
+	height: 61px;
+	position: absolute;
+	left: 490px;
+	top: 50%;
+	margin-top: -30px;
+}/*
+#logoButton {
+	background-image: url("doodlerLogo.png");
+	width: 216px;
+	height: 61px;
+	position: absolute;
+	left: 490px;
+	//left: 36px;
+	top: 50%;
+	margin-top: -30px;
+}*/
+
+#barCenterContainer {
+	height: 100%;
+	background-color: rgba(0,0,0,0);
+	width: 440px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+.barButton {
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #898989),
+		color-stop(1, #c0c0c0)
+	);
+	background-image: -moz-linear-gradient(
+		bottom,
+		#898989 0%,
+		#c0c0c0 100%
+	);
+	background-image: -o-linear-gradient(
+		bottom,
+		#898989 0%,
+		#c0c0c0 100%
+	);
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+	color: #fff;
+	width: 130px;
+	height: 40px;
+	border-radius: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.barButton:hover{
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #777),
+		color-stop(1, #c0c0c0)
+	);
+	background-image: -moz-linear-gradient(
+		bottom,
+		#777 0%,
+		#c0c0c0 100%
+	);
+	background-image: -o-linear-gradient(
+		bottom,
+		#777 0%,
+		#c0c0c0 100%
+	);
+}
+.pickerButton {
+	background-image: url(picker.png);
+	background-color: #777;
+	position: absolute;
+	left: 460px;
+	top: 550px;
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+	width: 35px;
+	height: 35px;
+	border-radius: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.pickerButton:hover{
+	background-image: url(picker.png);
+	background-color: #666;
+}
+#timerBox {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	height: 100px;
+	width: 100px;
+	margin-left: -50px;
+	background-color: #acacac;
+}
+
+#ref {
+	position: absolute;
+	left: 0;
+	top: 40px;
+	width: 500px;
+	height: 500px;
+	-webkit-filter: grayscale(100%);
+	//overflow: hidden;
+	/*filter: grayscale(100%);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");*/
+}
+.refWrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 500px;
+	height: 500px;
+	background-color: #aaa;
+	-webkit-animation-name: toss;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-name: toss;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-duration: 0.5s;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+@-webkit-keyframes toss {
+	0% { -webkit-transform: rotate(-30deg) scale(0.5) translate(-20px,-250px); opacity: 0; -webkit-animation-timing-function: ease-out; }
+	100% {-webkit-transform: rotate(0deg) scale(1) translate(0,0); opacity: 1; }
+}
+@-moz-keyframes toss {
+	0% { -moz-transform: rotate(-30deg) scale(1.3) translate(-20px,-250px); opacity: 0; -moz-animation-timing-function: ease-out; }
+	100% { -moz-transform: rotate(0deg) scale(1) translate(0,0); opacity: 1; }
+}
+.canvasWrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	-webkit-animation-name: tossRight;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-duration: 0.5s;
+	-moz-animation-name: tossRight;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-duration: 0.5s;
+}
+
+#canvasShadow {
+	background-image: url("shadow2.png");
+	position: absolute;
+	left: 600px;
+	top: 40px;
+	width: 520px;
+	height: 535px;
+}
+#canvas {
+	position: absolute;
+	background-color: #fff;
+	left: 600px;
+	top: 40px;
+	width: 500px;
+	height: 500px;
+	cursor: crosshair;
+}
+#brushTools {
+	position: absolute;
+	background-image: -webkit-linear-gradient(top, #666 0%, #888 100%);
+	background-image: -moz-linear-gradient(top, #777 0%, #7a7a7a 100%);
+	background-image: -o-linear-gradient(top, #777 0%, #7a7a7a 100%);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3), inset 0 2px 1px rgba(0,0,0,0.05);
+	left: 50px;
+	top: 540px;
+	width: 400px;
+	height: 80px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.brushColorSlider {
+	background-image: -moz-linear-gradient(left, rgb(0,0,0) 12.5%, rgb(255,255,255) 87.5%);
+	background-image: -o-linear-gradient(left, rgb(0,0,0) 12.5%, rgb(255,255,255) 87.5%);
+}
+
+.introStartButton{
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #898989),
+		color-stop(1, #c0c0c0)
+	);
+	background-image: -moz-linear-gradient(
+		bottom,
+		#898989 0%,
+		#c0c0c0 100%
+	);
+	background-image: -o-linear-gradient(
+		bottom,
+		#898989 0%,
+		#c0c0c0 100%
+	);
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+	color: #fff;
+	width: 130px;
+	height: 40px;
+	border-radius: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.introStartButton:hover{
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #777),
+		color-stop(1, #c0c0c0)
+	);
+	background-image: -moz-linear-gradient(
+		bottom,
+		#777 0%,
+		#c0c0c0 100%
+	);
+	background-image: -o-linear-gradient(
+		bottom,
+		#777 0%,
+		#c0c0c0 100%
+	);
+}
+#footer
+{
+	color: #666;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	text-align: justify;
+	font-size: 15px;
+	line-height: 25px;
+	border-top: 1px solid #aaa;
+}
+#footer button {
+	border-radius: 6px;
+	height: 35px;
+	width: 150px;
+	border: none;
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #898989),
+		color-stop(1, #c0c0c0)
+	);
+	background-image: -moz-linear-gradient(
+		bottom,
+		#898989 0%,
+		#c0c0c0 100%
+	);
+	background-image: -o-linear-gradient(
+		bottom,
+		#898989 0%,
+		#c0c0c0 100%
+	);
+	color: #fff;
+	cursor: pointer;
+}
+#footer button:hover {
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, #777),
+		color-stop(1, #c0c0c0)
+	);
+	background-image: -moz-linear-gradient(
+		bottom,
+		#777 0%,
+		#c0c0c0 100%
+	);
+	background-image: -o-linear-gradient(
+		bottom,
+		#777 0%,
+		#c0c0c0 100%
+	);
+}
+#footer a {
+	color: #666;
+}
+#footer a:hover {
+	color: #000;
+}
+#footer b {
+	font-size: 16px;
+	font-weight: normal;
+	color: #444;
+}
+.footerVertBlock {
+	width: 160px;
+	float: left;
+	padding: 20px;
+}
+.refLabel {
+	overflow: hidden;
+}
+.refLabel a {
+	color: #666;
+	font-size: 19px;
+}
+.refLabel a:hover {
+	color: #000;
+}
+.refLabel i {
+	line-height: 25px;
+}
+#chromeButton {
+	position: absolute;
+	top: 73px;
+	left: 950px;
+	margin-top: -40px;
+	text-align: center;
+	background-color: #4E7DD7;
+	color: white;
+	padding: 5px 10px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	border: 1px solid #2D53AF;
+	cursor: pointer;
+	opacity: 0.7;
+	-webkit-transition: opacity 0.3s ease-in-out;
+}
+#chromeButton:hover {
+	opacity: 1;
+}
+#switchButton {
+	position: absolute;
+	left: 518px;
+	top: 250px;
+	width: 62px;
+	height: 56px;
+	background-image: url(switch.png);
+	cursor: pointer;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	opacity: 0.2;
+}
+#switchButton:hover {
+	opacity: 1;
+}
